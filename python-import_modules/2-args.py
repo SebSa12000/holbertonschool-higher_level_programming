@@ -6,6 +6,5 @@ if __name__ == "__main__":
         print("0 arguments.")
     elif len(args) > 0:
         print("{} arguments:".format(len(args)))
-
-    for i, arg in enumerate(args):
-        print("{}: {}".format(i + 1, arg))
+        for i, arg in enumerate(args):
+            print("{}: {}".format(i + 1, arg))
