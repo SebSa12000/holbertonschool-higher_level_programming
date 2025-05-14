@@ -17,6 +17,8 @@ def roman_to_int(roman_string):
             elif character == 'L':
                 sum = sum + 50
             elif character == 'C':
+                if precedent == 'X':
+                    sum = sum - 20
                 sum = sum + 100
             elif character == 'D': 
                 sum = sum + 500
