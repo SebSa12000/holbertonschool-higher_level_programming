@@ -6,6 +6,8 @@ def roman_to_int(roman_string):
         if character == 'I':
             sum = sum + 1
         elif character == 'V':
+            if precedent == 'I':
+                sum = sum - 2
             sum = sum + 5
         elif character == 'X':
             if precedent == 'I':
