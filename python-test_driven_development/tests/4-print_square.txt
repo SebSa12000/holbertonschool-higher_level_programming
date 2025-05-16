@@ -4,6 +4,11 @@
 ##
 ##
 
+>>> print_square("X")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
 >>> print_square(-2)
 Traceback (most recent call last):
     ... 
