@@ -78,7 +78,4 @@ class Square:
                     print("#", end="")
                 print("")
         else:
-            x, y = self.__position
-            for l in range(y):
-                print("")
             print("")
