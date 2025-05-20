@@ -6,3 +6,4 @@ Class Square
 
 class Square:
     '''Empty classe named Square'''
+    pass
