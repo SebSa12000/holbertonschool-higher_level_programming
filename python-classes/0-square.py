@@ -5,4 +5,4 @@ Class Square
 
 
 class Square:
-    pass
+    '''Empty classe named Square'''
