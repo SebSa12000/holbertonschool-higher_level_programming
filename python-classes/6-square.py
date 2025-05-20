@@ -14,12 +14,12 @@ class Square:
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if not isinstance(position, tuple):
-            raise TypeError("sposition must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         if len(position) != 2:
-           raise TypeError("sposition must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         x, y = position
-        if not isinstance(x, int) or not isinstance(y, int) :
-            raise TypeError("sposition must be a tuple of 2 positive integers")
+        if not isinstance(x, int) or not isinstance(y, int):
+            raise TypeError("position must be a tuple of 2 positive integers")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
@@ -41,7 +41,7 @@ class Square:
         '''Property setter  to give value to  __size'''
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        
+
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
@@ -56,12 +56,12 @@ class Square:
     def position(self, value):
         '''Property setter  to give value to  __position'''
         if not isinstance(value, tuple):
-            raise TypeError("sposition must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         if len(value) != 2:
-           raise TypeError("sposition must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         x, y = value
-        if not isinstance(x, int) or not isinstance(y, int) :
-            raise TypeError("sposition must be a tuple of 2 positive integers")
+        if not isinstance(x, int) or not isinstance(y, int):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
         return self.__position
 
