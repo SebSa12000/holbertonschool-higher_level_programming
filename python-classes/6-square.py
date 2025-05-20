@@ -69,6 +69,8 @@ class Square:
         '''Print a square with #'''
         if self.size > 0:
             x, y = self.__position
+            for l in range(y):
+                print("")
             for i in range(self.size):
                 for k in range(x):
                     print(" ", end="")
