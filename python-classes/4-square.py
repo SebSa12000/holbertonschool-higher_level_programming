@@ -2,13 +2,15 @@
 '''
 Class Square
 '''
+
+
 class Square:
     '''
-    Init function and raise error if it's a string or < 0 
+    Init function and raise error if it's a string or < 0
     '''
     def __init__(self, size=0):
         self.__size = 0
-        if  isinstance(size, str):
+        if isinstance(size, str):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
@@ -19,7 +21,7 @@ class Square:
     '''
     def area(self):
         return self.__size * self.__size
-    
+
     @property
     def size(self):
         '''Getter to retrieve the size'''
