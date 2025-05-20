@@ -6,13 +6,15 @@ class Square:
     '''
     Init function and raise error if it's a string or < 0 
     '''
-    def __init__(self, size=0):
+    def __init__(self, size=0, position= (0, 0)):
         self.__size = 0
+        self.__position = (0, 0) 
         if  isinstance(size, str):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+        self.__position = position
 
     '''
     Function area
