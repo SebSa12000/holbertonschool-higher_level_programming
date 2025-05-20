@@ -7,7 +7,6 @@ Class Square
 class Square:
     ''' Init function '''
     def __init__(self, size=0):
-
         ''' default value + raise exception '''
         self._Square__size = 0
         if isinstance(size, str):
