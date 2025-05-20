@@ -2,5 +2,7 @@
 '''
 Class Square
 '''
+
+
 class Square:
     pass
