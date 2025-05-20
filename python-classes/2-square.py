@@ -5,9 +5,7 @@ Class Square
 
 
 class Square:
-    '''
-    Init function and raise error if it's a string or < 0
-    '''
+    ''' Init function '''
     def __init__(self, size=0):
         self._Square__size = 0
         if isinstance(size, str):
