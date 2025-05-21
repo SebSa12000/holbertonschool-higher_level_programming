@@ -88,8 +88,9 @@ class Rectangle:
                     new_string = new_string + "#"
                 new_string = new_string + "\n"
             return new_string[:-1]
-        
+
     def __repr__(self):
         ''' print rectangle '''
-        new_string = "Rectangle(" + str(self._Rectangle__width) + "," + str(self._Rectangle__height) + ")"
+        new_string = "Rectangle(" + str(self._Rectangle__width) + ", " \
+            + str(self._Rectangle__height) + ")"
         return new_string
