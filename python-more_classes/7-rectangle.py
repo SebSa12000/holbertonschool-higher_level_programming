@@ -14,9 +14,6 @@ class Rectangle:
     Symbol
     '''
     print_symbol = "#"
-
-
-
     '''
     Init function and raise error if it's a string or < 0
     '''
