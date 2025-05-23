@@ -65,7 +65,8 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         ''' return square '''
-        return Rectangle.__init__(cls, size, size)
+        new_square = Rectangle(size, size)
+        return new_square
 
     @classmethod
     def bigger_or_equal(cls, rect_1, rect_2):
