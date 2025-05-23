@@ -5,6 +5,9 @@ Class Rectangle
 
 
 class Rectangle:
+    '''
+    Rectangle : number of instances
+    '''
     number_of_instances = 0
 
     '''
