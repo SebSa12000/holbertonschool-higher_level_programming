@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-''' 
-inherits_from 
+'''
+inherits_from
 '''
 
 
