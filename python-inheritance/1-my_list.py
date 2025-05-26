@@ -13,4 +13,4 @@ class MyList(list):
 
     def __str__(self):
         ''' String representation of the list '''
-        return str(self)
+        return str(self.print_sorted())
