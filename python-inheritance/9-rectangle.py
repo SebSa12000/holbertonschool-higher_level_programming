@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 '''
-    Class Rectangle 
+    Class Rectangle
 '''
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-class Rectangle(BaseGeometry):      
+
+class Rectangle(BaseGeometry):
     ''' a rectangle class '''
-    
+
     def __init__(self, width, height):
         ''' initialize the rectangle '''
         self.integer_validator("width", width)
@@ -18,11 +19,6 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         return self.__height * self.__width
-    
-    def print(self):
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#")
 
     def __str__(self):
         ret = "[Rectange] " + str(self.__width) + "/" + str(self.__height)
