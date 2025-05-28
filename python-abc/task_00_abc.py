@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
-'''
-    class abstract
-'''
+
+''' class abstract '''
 
 
 class Animal(ABC):
