@@ -13,12 +13,14 @@ class Animal(ABC):
 
 
 class Dog(Animal):
+    ''' Class representing a dog, inheriting from Animal. '''
     def sound(self):
         ''' Returns the sound made by a dog. '''
         return "Woof!"
 
 
 class Cat(Animal):
+    ''' Class representing a cat, inheriting from Animal. '''
     def sound(self):
         ''' Returns the sound made by a cat. '''
         return "Meow!"
