@@ -5,7 +5,12 @@
 
 
 def read_file(filename=""):
-    ''' function to read a file '''
-    with open(filename,"r") as file:
-        contents = file.read()
-        print(contents)
+    ''' 
+    function to read a file 
+    '''
+    with open(filename, "r", encoding="utf-8") as file:
+        for line in file:
+            if line:
+                print(line, end="")
+            else:
+                break
