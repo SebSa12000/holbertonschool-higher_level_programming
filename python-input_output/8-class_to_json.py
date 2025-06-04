@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-''' class to json'''
-
-
-import json
+''' return class dict'''
 
 
 def class_to_json(obj):
     ''' dumps a class '''
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
