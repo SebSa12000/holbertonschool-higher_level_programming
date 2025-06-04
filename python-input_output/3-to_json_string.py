@@ -2,6 +2,7 @@
 import json
 
 def to_json_string(my_obj):
-    ''' to_json_string return the dump of json '''
-    var = json.dumps(my_obj)
-    return var
+    '''
+        convert an object to a JSON string
+    '''
+    return json.dumps(my_obj)
