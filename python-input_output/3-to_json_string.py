@@ -1,12 +1,8 @@
 #!/usr/bin/python3
 import json
-'''
-    convert in json
-'''
-
 
 def to_json_string(my_obj):
     '''
-        convert in json
+        to_json_string return the dump of json
     '''
     return json.dumps(my_obj)
