@@ -1,14 +1,13 @@
-#!/usr/bin/python3
-import json
+''' task_00_basic_serialization.py
+This module demonstrates basic serialization and deserialization using the pickle module.
 '''
-    serialization
-'''
+import pickle   
+def serialize_data(data, filename):
+    ''' Serialize data to a file using pickle '''
+    with open(filename, 'wb') as file:
+        pickle.dump(data, file) 
 
-
-def serialize_and_save_to_file(data, filename):
-    ''' serialize '''
-    json.dump(data,filename)
-
-def load_and_deserialize(filename):
-    ''' deserialize '''
-    return json.load(filename)
+def deserialize_data(filename):
+    ''' Deserialize data from a file using pickle '''
+    with open(filename, 'rb') as file:
+        return pickle.load(file)
