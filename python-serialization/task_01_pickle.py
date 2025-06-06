@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' custom object'''
+''' Pickle module for Serialize and deserializ '''
 
 
 import pickle
