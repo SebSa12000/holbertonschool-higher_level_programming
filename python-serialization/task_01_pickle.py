@@ -7,11 +7,13 @@ import pickle
 
 def CustomObject():
     def __init__(self, name, age, is_student):
+        ''' init custom object '''
         self.name = name
         self.age = age
         self.is_student = is_student
 
     def display(self):
+        ''' function display '''
         print(f"name: {self.name}")
         print(f"age: {self.age}")
         print(f"Is Student: {self.is_student}")
