@@ -7,3 +7,4 @@ main*.py
 *.json
 *my*
 *_2*
+**venv/
