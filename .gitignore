@@ -5,6 +5,5 @@ main*.py
 .csv
 *.txt
 *.json
-*my*
 *_2*
 **venv/
