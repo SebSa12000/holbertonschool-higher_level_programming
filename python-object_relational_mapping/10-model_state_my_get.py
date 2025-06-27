@@ -19,11 +19,11 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     name = sys.argv[4]
-    first = session.query(State).filter(State.name.contains(name)).order_by(State.id).first()
+    first = session.query(State).filter(State.name.contains(name)).first()
 
     if first:
         print("{}".format(first.id))
     else:
         print('Not found')
-        
+
     session.close()
