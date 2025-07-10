@@ -1,5 +1,8 @@
 #!/usr/bin/node
-let index = 0;
-process.argv.forEach((val, index1) => {if (index1 > 1) console.log(val); index++;});
-if (index < 3)
-    console.log('No argument');
+if (process.argv.length === 2) {
+  console.log('No argument');
+} else if (process.argv.length === 3) {
+  console.log('Argument found:', process.argv[2]);
+} else {
+  console.log('Arguments found:', process.argv.slice(2).join(', '));
+}
