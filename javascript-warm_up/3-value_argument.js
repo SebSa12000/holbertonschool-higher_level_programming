@@ -1,13 +1,10 @@
 #!/usr/bin/node
-let trouve = 0;
-let str= ''
-process.argv.slice(2).forEach((val) => {str=str+' ' +val; trouve++;});
-if (trouve === 0)
+if (process.argv[2] === undefined)
 {
   console.log('No argument');
 }
 else
 {
-  console.log(str.slice(1));
+  console.log(process.argv[2]);
 }
 
