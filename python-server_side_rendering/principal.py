@@ -12,5 +12,6 @@ attendees = [
     {"name": "Charlie", "event_title": "AI Summit", "event_date": None, "event_location": "Boston"}
 ]
 
+
 # Call the function with the template and attendees list
 generate_invitations(template_content, attendees)

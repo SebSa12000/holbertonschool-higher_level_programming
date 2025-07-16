@@ -22,22 +22,26 @@ def generate_invitations(template, array_list):
         print(f'No data provided, no output files generated.')
         return
 
-    i = 1
-    for item in array_list:
-        dictionary = item
-        serialized = json.dumps(dictionary)
-        unpacked   = json.loads(serialized)
+    try:
+        num = 1
+        for attendee in attendees:
+            mail = template
+            keys = ['name', 'event_title', 'event_location', 'event_date']
+            for key in keys:
+                word = attendee.get(key, "N/A")
+                mail = mail.replace(f'{{{key}}}',
+                                    word if word
+                                    is not None else f"{key}: N/A")
 
-        txt1 = template.format(name = unpacked['name'],  event_title = unpacked['event_title'], 
-                               event_date = unpacked['event_date'],event_location = unpacked['event_location'])
-        
-        name_file = "output_" + str(i) + ".txt"
-        if os.path.exists(name_file):
-            print("Le fichier "+ name_file+ " existe deja")
-        else:
-            try:
-                with open(name_file, "w") as f:
-                    f.write(txt1)
-            except:
-                print("erreur d'ecriture")
-        i = i + 1
+            if os.path.exists(f'output_{num}.txt'):
+                print(f'output_{num}.txt already exists, skipping writting')
+                continue
+
+            with open(f'output_{num}.txt', 'w') as file:
+                file.write(mail)
+            print(f'output_{num}.txt created successfully.')
+
+            num = num + 1
+
+    except Exception as e:
+        print(f'An error occured while writting output_{num}.txt: {e}')
