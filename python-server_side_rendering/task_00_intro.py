@@ -7,7 +7,20 @@ def generate_invitations(template, array_list):
         print(f'template must be a string, got {type(template).__name__}')
         return
     if not template:
-        print("Le fichier "+ template+ " ne doit pas être vide")
+        print('Template is empty, no output files generated.')
+        return
+
+    if not isinstance(array_list, list) or \
+        not all(isinstance(dict_attendee, dict)
+                for dict_attendee in array_list):
+        print(
+            'attendees must be a list and '
+            'with only dictionaries got {}'.format(type(array_list).__name__)
+            )
+        return
+    if not array_list:
+        print(f'No data provided, no output files generated.')
+        return
 
     i = 1
     for item in array_list:
