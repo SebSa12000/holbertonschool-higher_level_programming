@@ -6,8 +6,8 @@ def generate_invitations(template, array_list):
     if not isinstance(template, str):
         print(f'template must be a string, got {type(template).__name__}')
         return
-    if os.path.exists(template):
-        print("Le fichier "+ template+ " n'existe pas")
+    if not template:
+        print("Le fichier "+ template+ " ne doit pas être vide")
 
     i = 1
     for item in array_list:
