@@ -1,6 +1,6 @@
 import json
 import os
-def generate_invitations(template, array_list):
+def generate_invitations(template, attendees):
 
     '''Generate invitations'''
     if not isinstance(template, str):
@@ -10,15 +10,15 @@ def generate_invitations(template, array_list):
         print('Template is empty, no output files generated.')
         return
 
-    if not isinstance(array_list, list) or \
+    if not isinstance(attendees, list) or \
         not all(isinstance(dict_attendee, dict)
-                for dict_attendee in array_list):
+                for dict_attendee in attendees):
         print(
             'attendees must be a list and '
-            'with only dictionaries got {}'.format(type(array_list).__name__)
+            'with only dictionaries got {}'.format(type(attendees).__name__)
             )
         return
-    if not array_list:
+    if not attendees:
         print(f'No data provided, no output files generated.')
         return
 
