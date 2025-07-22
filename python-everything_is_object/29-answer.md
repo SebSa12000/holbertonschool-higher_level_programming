@@ -33,12 +33,16 @@ def modify_list(some_list):
   some_list.append(4)
 
 my_list = [1, 2, 3]
+
 modify_list(my_list)
+
 print(my_list) " prints [1, 2, 3, 4]
 
 def modify_string(some_string):
     some_string += ' world'
 
 my_string = 'hello'
+
 modify_string(my_string)
+
 print(my_string) " prints 'hello'
